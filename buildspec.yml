@@ -2,15 +2,14 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      java: openjdk11
     commands:
+      - sudo apt update
+      - sudo apt install nginx -y
       - echo Installing dependencies
   build:
     commands:
       - echo Building web app
-      - mkdir output
-      - cp index.html output/
+      - cp index.html /var/www/html
 artifacts:
   files:
-    - output/index.htmli
+    - **/*
