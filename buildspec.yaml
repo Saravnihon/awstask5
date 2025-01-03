@@ -10,6 +10,3 @@ phases:
     commands:
       - echo Building web app
       - cp index.html /var/www/html
-artifacts:
-  files:
-    - **/*
